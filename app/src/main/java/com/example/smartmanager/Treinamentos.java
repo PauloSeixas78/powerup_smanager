@@ -4,9 +4,9 @@ public class Treinamentos {
     private Long id;
     private String nome;
     private String ementa;
-    private String cargahoraria;
+    private Integer cargahoraria;
 
-    public Treinamentos(Long id, String nome, String ementa, String cargahoraria) {
+    public Treinamentos(Long id, String nome, String ementa, Integer cargahoraria) {
         this.id = id;
         this.nome = nome;
         this.ementa = ementa;
@@ -25,7 +25,7 @@ public class Treinamentos {
         return ementa;
     }
 
-    public String getCargahoraria() {
+    public Integer getCargahoraria() {
         return cargahoraria;
     }
 
@@ -41,7 +41,7 @@ public class Treinamentos {
         this.ementa = ementa;
     }
 
-    public void setCargahoraria(String cargahoraria) {
+    public void setCargahoraria(Integer cargahoraria) {
         this.cargahoraria = cargahoraria;
     }
 }

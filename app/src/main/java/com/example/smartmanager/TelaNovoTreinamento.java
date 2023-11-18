@@ -3,6 +3,8 @@ package com.example.smartmanager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -20,10 +22,14 @@ public class TelaNovoTreinamento extends AppCompatActivity {
 
     Button salvar;
 
+    String treinamento_id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_novo_treinamento);
+
+        treinamento_id = getIntent().getStringExtra("treinamento_id");
 
         nome = findViewById(R.id.editTextNome);
         ementa = findViewById(R.id.editTextEmenta);
@@ -33,7 +39,13 @@ public class TelaNovoTreinamento extends AppCompatActivity {
 
         helper = new Databasehelper(this);
 
-
+        if(treinamento_id != null){
+            prepararEdicao();
+        }else{
+            nome.setText("");
+            ementa.setText("");
+            cargahoraria.setText("");
+        }
 
         salvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +53,15 @@ public class TelaNovoTreinamento extends AppCompatActivity {
                 salvarTreinamento(view);
             }
         });
+    }
+
+    public void prepararEdicao(){
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT nome, ementa, cargahoraria from treinamentos WHERE _id = ?",new String[]{treinamento_id});
+        cursor.moveToFirst();
+        nome.setText(cursor.getString(0));
+        ementa.setText(cursor.getString(1));
+        cargahoraria.setText(cursor.getString(2));
     }
 
     public void salvarTreinamento(View view) {
@@ -52,24 +73,22 @@ public class TelaNovoTreinamento extends AppCompatActivity {
             valores.put("ementa", ementa.getText().toString());
             valores.put("cargahoraria", cargahoraria.getText().toString());
 
-            long resultado = db.insert("treinamentos", null, valores);
+            long resultado;
+            if(treinamento_id == null) {
+                resultado = db.insert("treinamentos", null, valores);
+            }else{
+                resultado = db.update("treinamentos",valores, "_id = ?",new String[]{treinamento_id});
+            }
 
             if (resultado != -1) {
                 Toast.makeText(this, getString(R.string.activity_tela_novo_treinamento_salvo_com_sucesso), Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, getString(R.string.activity_tela_novo_treinamento_erro_ao_salvar), Toast.LENGTH_LONG).show();
             }
+
         }else{
             Toast.makeText(this, getString(R.string.activity_tela_novo_treinamento_campos_vazios),Toast.LENGTH_SHORT).show();
         }
-
-    }
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        nome.setText("");
-        ementa.setText("");
-        cargahoraria.setText("");
+        startActivity(new Intent(TelaNovoTreinamento.this, TelaTreinamentos.class));
     }
 }
