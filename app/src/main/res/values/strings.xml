@@ -9,4 +9,8 @@
     <string name="activity_tela_novo_treinamento_carga_horaria">Carga Horária</string>
     <string name="activity_tela_novo_treinamento_salvar">Salvar</string>
     <string name="activity_tela_novo_treinamento_excluir">Excluir</string>
+
+    <string name="activity_tela_novo_treinamento_salvo_com_sucesso">Treinamento salvo com sucesso!</string>
+    <string name="activity_tela_novo_treinamento_erro_ao_salvar">Erro ao salvar treinamento!</string>
+    <string name="activity_tela_novo_treinamento_campos_vazios">Preencher todos os campos!</string>
 </resources>
