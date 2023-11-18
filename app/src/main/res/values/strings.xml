@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SmartManager</string>
+    <string name="activity_tela_treinamentos">Treinamentos</string>
+    <string name="activity_tela_treinamentos_novo_treinamento">Novo Treinamento</string>
+
+    <string name="activity_tela_novo_treinamento_treinamentos">Treinamentos</string>
+    <string name="activity_tela_novo_treinamento_nome">Nome</string>
+    <string name="activity_tela_novo_treinamento_ementa">Ementa</string>
+    <string name="activity_tela_novo_treinamento_carga_horaria">Carga Horária</string>
+    <string name="activity_tela_novo_treinamento_salvar">Salvar</string>
+    <string name="activity_tela_novo_treinamento_excluir">Excluir</string>
 </resources>
