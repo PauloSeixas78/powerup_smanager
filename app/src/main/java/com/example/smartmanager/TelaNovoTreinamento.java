@@ -22,6 +22,8 @@ public class TelaNovoTreinamento extends AppCompatActivity {
 
     Button salvar;
 
+    Button excluir;
+
     String treinamento_id;
 
     @Override
@@ -36,6 +38,7 @@ public class TelaNovoTreinamento extends AppCompatActivity {
         cargahoraria = findViewById(R.id.editTextCargaHoraria);
 
         salvar = findViewById(R.id.buttonTelaCadastroSalvarTreinamentos);
+        excluir = findViewById(R.id.buttonTelaCadastroExcluirTreinamentos);
 
         helper = new Databasehelper(this);
 
@@ -51,6 +54,13 @@ public class TelaNovoTreinamento extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 salvarTreinamento(view);
+            }
+        });
+
+        excluir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                excluirTreinamento(view);
             }
         });
     }
@@ -91,4 +101,16 @@ public class TelaNovoTreinamento extends AppCompatActivity {
         }
         startActivity(new Intent(TelaNovoTreinamento.this, TelaTreinamentos.class));
     }
+
+    public void excluirTreinamento(View view){
+        SQLiteDatabase db = helper.getWritableDatabase();
+        long resultado = db.delete("treinamentos", "_id = ?", new String[]{treinamento_id});
+        if (resultado != -1) {
+            Toast.makeText(this, "Treinamento excluído com sucesso!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Falha ao excluir treinamento!", Toast.LENGTH_LONG).show();
+        }
+        startActivity(new Intent(TelaNovoTreinamento.this, TelaTreinamentos.class));
+    }
+
 }

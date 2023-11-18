@@ -68,7 +68,7 @@
         android:text="@string/activity_tela_novo_treinamento_salvar" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonTelaCadastroExcluirTreinamentos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/activity_tela_novo_treinamento_excluir" />
