@@ -1,6 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="temurin-17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/202103454615/StudioProjects/powerup_smanager/app/src/main/res/layout/activity_tela_gerenciador_pessoas.xml" value="0.15625" />
+        <entry key="..\:/Users/202103454615/StudioProjects/powerup_smanager/app/src/main/res/layout/activity_tela_time.xml" value="0.17" />
+      </map>
+    </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartManager">
         <activity
+            android:name=".TelaTime"
+            android:exported="false" />
+        <activity
             android:name=".TelaNovoTreinamento"
             android:exported="false" />
         <activity

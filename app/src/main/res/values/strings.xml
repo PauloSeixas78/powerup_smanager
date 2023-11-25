@@ -9,4 +9,8 @@
     <string name="activity_tela_novo_treinamento_carga_horaria">Carga Horária</string>
     <string name="activity_tela_novo_treinamento_salvar">Salvar</string>
     <string name="activity_tela_novo_treinamento_excluir">Excluir</string>
+
+    <string name="activity_tela_time_novo_colaborador">Novo Colaborador</string>
+
+
 </resources>

@@ -9,12 +9,22 @@ import android.widget.Button;
 
 public class TelaGerenciadorPessoas extends AppCompatActivity {
     Button treinamentos;
+    Button time;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_gerenciador_pessoas);
-        treinamentos = findViewById(R.id.buttonTreinamentos);
+        time = findViewById(R.id.buttonTime);
 
+
+        treinamentos = findViewById(R.id.buttonTreinamentos);
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TelaGerenciadorPessoas.this, TelaTime.class));
+            }
+        });
         treinamentos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
