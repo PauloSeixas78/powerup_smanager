@@ -8,5 +8,16 @@
     <string name="activity_tela_novo_treinamento_ementa">Ementa</string>
     <string name="activity_tela_novo_treinamento_carga_horaria">Carga Horária</string>
     <string name="activity_tela_novo_treinamento_salvar">Salvar</string>
-    <string name="activity_tela_novo_treinamento_excluir">Excluir</string>
+    <string name="activity_tela_novo_treinsdadssamento_excluir">Excluir</string>
+
+    <string name="activity_tela_novo_feedback">Novo Feedback</string>
+    <string name="activity_tela_novo_feedback_feedback">Feedback</string>
+    <string name="activity_tela_novo_feedback_matricula">Matricula</string>
+    <string name="activity_tela_novo_feedback_situação">Situação</string>
+    <string name="activity_tela_novo_feedback_comportamento">Comportamento</string>
+    <string name="activity_tela_novo_feedback_impacto">Impacto</string>
+    <string name="activity_tela_novo_feedback_salvar">Salvar</string>
+    <string name="activity_tela_novo_feedback_excluir">Excluir</string>
+
+
 </resources>

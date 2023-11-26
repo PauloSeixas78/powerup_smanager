@@ -67,5 +67,5 @@
         android:id="@+id/button7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/activity_tela_novo_treinamento_excluir" />
+        android:text="@string/activity_tela_novo_treinsdadssamento_excluir" />
 </LinearLayout>

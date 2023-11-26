@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartManager">
         <activity
+            android:name=".TelaNovoFeedback"
+            android:exported="false" />
+        <activity
             android:name=".TelaListaFeedbacks"
             android:exported="false" />
         <activity

@@ -9,19 +9,21 @@
     tools:context=".TelaListaFeedbacks">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonNovoFeedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Novo Feedback" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="TextView" />
+        android:gravity="center"
+        android:text="Feedback" />
 
     <ListView
+        android:id="@+id/ListaFeedbacks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp" />
